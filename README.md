@@ -1,11 +1,11 @@
 # react-usemap-render-component
 
-## Descripción
+## Description
 
 An npm package for rendering ReactJS components in a cleaner and more beautiful way, allowing elements to be passed to the components from the hook’s props.
 <!-- Un paquete npm para renderizar componentes de ReactJS de una forma más bonita y limpia, permitiendo pasar elementos a los componentes desde las props del hook. -->
 
-## Instalación
+## Installation
 
 To install this package, run the following command in the terminal:
 <!-- Para instalar este paquete, ejecuta el siguiente comando en la terminal: -->
@@ -15,7 +15,7 @@ npm install react-usemap-render-component
 yarn add react-usemap-render-component
 
 
-## Uso
+## Usage
 
 To use this package in your project, you must first import it:
 <!-- Para usar este paquete en tu proyecto, primero debes importarlo: -->
