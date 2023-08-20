@@ -19,10 +19,10 @@ yarn add react-usemap-render-component
 
 To use this package in your project, you must first import it:
 <!-- Para usar este paquete en tu proyecto, primero debes importarlo: -->
+Then, you can use the useMap hook to render your ReactJS components. Here is an example of how to use the hook:
+ <!-- Luego, puedes usar el hook useMap para renderizar tus componentes de ReactJS. Aquí hay un ejemplo de cómo usar el hook: -->
 
 ```javascript
-Then, you can use the useMap hook to render your ReactJS components. Here is an example of how to use the hook:
-// Luego, puedes usar el hook useMap para renderizar tus componentes de ReactJS. Aquí hay un ejemplo de cómo usar el hook:
 
 import React from 'react';
 import useMap from 'react-usemap-render-component';
