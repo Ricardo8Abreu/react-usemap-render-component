@@ -41,9 +41,14 @@ const Component = ({ id, name, color }) => {
 } 
 
 const MyApp = () => {
-  const itemsComponent = useMap({ data, Component, color: 'red' })
+  const itemsComponent = useMap({ data, Component, key: "id", color: 'red' })
 
   // Rendering 
   return <div>{itemsComponent}</div>
 };
+
+
+## Comunity
+https://t.me/ricardo8Abreu_code_lab_community
+
 

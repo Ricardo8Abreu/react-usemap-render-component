@@ -1,22 +1,35 @@
-import React from "react"
+import React, { ReactElement } from "react"
 
-interface UseMapProps {
-  data: any[]
-  Component: React.FC<any> | null | false
+type Props = ReactElement["props"]
 
+type UseMap = <T extends object, Y extends Props>(props: UseMapProps<T, Y>) => ReactElement[] | null
+
+type UseMapProps<T extends object, Y> = Y & {
+  key?: keyof T
+  data: T[]
+  Component: Component<Y & T>
 }
 
-const useMap = ({ data, Component, ...props }: UseMapProps & Record<string, any>) => {
+type Component<Y> = (params: Y) => JSX.Element
+
+const useMap: UseMap = ({ data, Component, key, ...props }) => {
+
   return (
-     <>
-      {data && data.map((item, i) => {
-        const key = item.id || i
+    !data
+      ? null
+      : data.map((item, i) => {
+        let relativeKey: React.Key = i
+
+        if (key && key in item) {
+          relativeKey = `${item[key]}`
+        }
+
         return (
-          Component &&
-          <Component key={key} i={i} element={item} {...item} {...props} />
+          // @ts-ignore
+          <Component key={relativeKey} i={i} {...item} {...props} />
         )
-      })}
-    </>
+      })
+
   )
 }
 
