@@ -1,16 +1,17 @@
-import React, { ReactElement } from "react"
+import React from "react"
 
-type Props = ReactElement["props"]
+type Props = JSX.Element["props"]
 
-type UseMap = <T extends object, Y extends Props>(props: UseMapProps<T, Y>) => ReactElement[] | null
+type UseMap = <T extends object, Y extends Props>(props: UseMapProps<T, Y>) => JSX.Element[] | null
 
-type UseMapProps<T extends object, Y> = Y & {
+type UseMapProps<T extends object, Y extends Props> = Omit<Y, keyof T> & {
   key?: keyof T
   data: T[]
-  Component: Component<Y & T>
+  Component: Component<Y>
+
 }
 
-type Component<Y> = (params: Y) => JSX.Element
+type Component<Y extends Props> = (__0: Y) => JSX.Element
 
 const useMap: UseMap = ({ data, Component, key, ...props }) => {
 
