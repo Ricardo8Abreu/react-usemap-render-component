@@ -14,6 +14,8 @@ npm install react-usemap-render-component
   or <!-- o -->
 yarn add react-usemap-render-component
 
+## Comunity
+https://t.me/ricardo8Abreu_code_lab_community
 
 ## Usage
 
@@ -47,8 +49,4 @@ const MyApp = () => {
   return <div>{itemsComponent}</div>
 };
 
-
-## Comunity
-https://t.me/ricardo8Abreu_code_lab_community
-
-
+```
