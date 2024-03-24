@@ -130,5 +130,6 @@ const items = useMap({ data, Component: MyComponent, color: 'red', config: { key
 ```
 
 ### Props that are passed by default to the component
--The index value of the array, can be received in the component to render
+-"index" value of the array, can be received in the component to render
+-"children" child of component
 ```
