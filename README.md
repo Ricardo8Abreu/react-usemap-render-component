@@ -95,7 +95,7 @@ const MyApp = () => {
 ## Configuration
   `config`: Optional object that can contain the following values:
 
-  - `key`: Allows changing the prop key of the component to render. The values can be:
+   *`key`: Allows changing the prop key of the component to render. The values can be:
     by default it has "default"
 
   - `"default"`: If the data is an object and has an `id` property, `id` will be used otherwise it takes the index as key.
