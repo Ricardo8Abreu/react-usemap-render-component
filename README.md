@@ -1,6 +1,3 @@
-Sure, here is the English translation of your README:
-
-```markdown
 # react-usemap-render-component
 
 ## Description
@@ -11,10 +8,14 @@ An npm package for rendering ReactJS components in a cleaner and more beautiful 
 
 To install this package, run the following command in the terminal:
 
+
 ```bash
+
 npm install react-usemap-render-component
 ```
+
 or
+
 ```bash
 yarn add react-usemap-render-component
 ```
@@ -93,12 +94,17 @@ const MyApp = () => {
 
 ## Configuration
   `config`: Optional object that can contain the following values:
-    - `key`: Allows changing the prop key of the component to render. The values can be:
-      by default it has "default"
-    - `"default"`: If the data is an object and has an `id` property, `id` will be used otherwise it takes the index as key.
-    - `"item"`: If the data is not an object, like array of strings, you can use the string element itself as a key.
-    - `"object fields"`: example "id" | "name" | "slug"
-    - `"index"`: index of the array
+
+  - `key`: Allows changing the prop key of the component to render. The values can be:
+    by default it has "default"
+
+  - `"default"`: If the data is an object and has an `id` property, `id` will be used otherwise it takes the index as key.
+
+  - `"item"`: If the data is not an object, like array of strings, you can use the string element itself as a key.
+
+  - `"object fields"`: example "id" | "name" | "slug"
+
+  - `"index"`: index of the array
 
 
 ### Examples
@@ -130,6 +136,6 @@ const items = useMap({ data, Component: MyComponent, color: 'red', config: { key
 ```
 
 ### Props that are passed by default to the component
--"index" value of the array, can be received in the component to render
--"children" child of component
-```
+-`"index"` value of the array, can be received in the component to render
+
+-`"children"` child of component
