@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, JSX } from "react"
 
 type NewProps = "children" | "index"
 type Component<Props> = FC<Props>
@@ -13,9 +13,10 @@ interface DataObject {
 type UseMapTypeData = object | DataNoObject
 type UseMapPropsPropagation<Props, Data> = Omit<Props, keyof Data | NewProps>
 
-type KeyConfig<Data> = Data extends object ? KeyConfigObject<Data> : KeyConfigNotObject
 type KeyConfigObject<Data> = "index" | keyof Data
 type KeyConfigNotObject = "item"
+
+type KeyConfig<Data> = Data extends object ? KeyConfigObject<Data> : KeyConfigNotObject
 
 type UseMapParams<Data, Props> = {
   data: Data[]
@@ -28,16 +29,16 @@ type UseMapParams<Data, Props> = {
 type UseMap = <Data extends UseMapTypeData, Props>(props: UseMapParams<Data, Props>) => (JSX.Element | undefined)[] | null
 
 export {
-    UseMap,
-    NewProps,
-    Component,
-    KeyConfig,
-    DataObject,
-    UseMapProps,
-    DataNoObject,
-    UseMapParams,
-    UseMapTypeData,
-    KeyConfigObject,
-    KeyConfigNotObject,
-    UseMapPropsPropagation
+  UseMap,
+  NewProps,
+  Component,
+  KeyConfig,
+  DataObject,
+  UseMapProps,
+  DataNoObject,
+  UseMapParams,
+  UseMapTypeData,
+  KeyConfigObject,
+  KeyConfigNotObject,
+  UseMapPropsPropagation
 }
