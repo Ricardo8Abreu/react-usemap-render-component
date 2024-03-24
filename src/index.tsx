@@ -5,9 +5,7 @@ import { UseMap } from "./types/types"
 import parseTypeItem from "./utils/parseTypeItem"
 import handleKeyObject from "./utils/handleKeyObject"
 
-
 const useMap: UseMap = ({ data, Component, config, ...props }) => {
-
   const { key = "default" } = { ...config }
 
   return (
@@ -15,10 +13,9 @@ const useMap: UseMap = ({ data, Component, config, ...props }) => {
       ? null
       : data.map((item, index) => {
         let relativeKey: Key = index
-   
+
         // if item is an object ***********************************
         if (typeof item === "object") {
-
           const { newKey, newItem } = parseTypeItem({ item, key }).object
 
           relativeKey = handleKeyObject({ item: newItem, key: newKey, index })
@@ -51,9 +48,7 @@ const useMap: UseMap = ({ data, Component, config, ...props }) => {
             {item}
           </Component>
         )
-
       })
-
 
   )
 }

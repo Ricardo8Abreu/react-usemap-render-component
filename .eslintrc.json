@@ -40,14 +40,8 @@
             "@typescript-eslint/no-unused-vars": "error",
             "@typescript-eslint/no-explicit-any": "off",
             "no-multiple-empty-lines": ["error", { "max": 1 }],
-            "@typescript-eslint/ban-ts-comment": "warn",
-            // CYPRESS
-            "cypress/no-assigning-return-values": "error",
-            "cypress/no-unnecessary-waiting": "warn",
-            "cypress/assertion-before-screenshot": "warn",
-            "cypress/no-force": "warn",
-            "cypress/no-async-tests": "error",
-            "cypress/no-pause": "error"
+            "@typescript-eslint/ban-ts-comment": "warn"
+
   
     }
 }
