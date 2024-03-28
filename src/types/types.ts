@@ -1,8 +1,14 @@
-import { FC, JSX } from "react"
+import { FC, ReactNode, ReactElement } from "react"
 
-type NewProps = "children" | "index"
+type NewProps = {
+  index: number
+  children: ReactNode
+
+}
+
 type Component<Props> = FC<Props>
 type UseMapProps<Props> = FC<Props>["arguments"]
+type UseMapReturn<Props> = ReactElement<Props>[]
 
 type DataNoObject = string | number
 
@@ -11,7 +17,7 @@ interface DataObject {
 }
 
 type UseMapTypeData = object | DataNoObject
-type UseMapPropsPropagation<Props, Data> = Omit<Props, keyof Data | NewProps>
+type UseMapPropsPropagation<Props, Data> = Omit<Props, keyof Data | keyof NewProps>
 
 type KeyConfigObject<Data> = "index" | keyof Data
 type KeyConfigNotObject = "item"
@@ -26,7 +32,7 @@ type UseMapParams<Data, Props> = {
   },
 } & UseMapPropsPropagation<Props, Data>
 
-type UseMap = <Data extends UseMapTypeData, Props>(props: UseMapParams<Data, Props>) => (JSX.Element | undefined)[] | null
+type UseMap = <Data extends UseMapTypeData, Props>(props: UseMapParams<Data, Props>) => UseMapReturn<NewProps & Data & Props>
 
 export {
   UseMap,
