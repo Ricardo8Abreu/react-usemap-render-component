@@ -2,6 +2,10 @@
   "version": "0.1.6",
   "license": "MIT",
   "description": "An npm package for rendering ReactJS components in a cleaner and more beautiful way, allowing elements to be passed to the components from the hook’s props.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ricardo8Abreu/react-usemap-render-component/"
+  },
   "keywords": [
     "React",
     "useMap",
