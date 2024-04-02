@@ -11,19 +11,16 @@ type ParseTypeItem = ({ item, key }: ParseTypeItemParams) => {
 }
 
 const parseTypeItem: ParseTypeItem = ({ item, key }) => {
-
-    return {
-        object: {
-            newKey: key as KeyConfig<object> | "default",
-            newItem: item as object
-        },
-        noObject: {
-            newKey: key as KeyConfigNotObject | "default",
-            newItem: item as DataNoObject
-        }
+  return {
+    object: {
+      newKey: key as KeyConfig<object> | "default",
+      newItem: item as object
+    },
+    noObject: {
+      newKey: key as KeyConfigNotObject | "default",
+      newItem: item as DataNoObject
     }
-
-
+  }
 }
 
 export default parseTypeItem
