@@ -9,18 +9,16 @@ const useMap: UseMap = ({ data, Component, config, ...props }) => {
   const { key = "default" } = { ...config }
 
   return (
-    !data
-      ? null
-      : data.map((item, index) => {
-        let relativeKey: Key = index
+    data.map((item, index) => {
+      let relativeKey: Key = index
 
-        // if item is an object ***********************************
-        if (typeof item === "object") {
-          const { newKey, newItem } = parseTypeItem({ item, key }).object
+      // if item is an object ***********************************
+      if (typeof item === "object") {
+        const { newKey, newItem } = parseTypeItem({ item, key }).object
 
-          relativeKey = handleKeyObject({ item: newItem, key: newKey, index })
+        relativeKey = handleKeyObject({ item: newItem, key: newKey, index })
 
-          return (
+        return (
             <Component
               key={relativeKey}
               index={index}
@@ -28,17 +26,17 @@ const useMap: UseMap = ({ data, Component, config, ...props }) => {
               {...item}
               {...props}
             />
-          )
-        }
+        )
+      }
 
-        // if item is not an object ***********************************
-        const { newKey, newItem } = parseTypeItem({ item, key }).noObject
+      // if item is not an object ***********************************
+      const { newKey, newItem } = parseTypeItem({ item, key }).noObject
 
-        if (newKey === "item") {
-          relativeKey = newItem
-        }
+      if (newKey === "item") {
+        relativeKey = newItem
+      }
 
-        return (
+      return (
           <Component
             key={relativeKey}
             index={index}
@@ -47,8 +45,8 @@ const useMap: UseMap = ({ data, Component, config, ...props }) => {
           >
             {item}
           </Component>
-        )
-      })
+      )
+    })
 
   )
 }
