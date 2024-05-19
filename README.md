@@ -2,7 +2,9 @@
 
 ## Description
 
-An npm package for rendering ReactJS components in a cleaner and more beautiful way, allowing elements to be passed to the components from the hook’s props.
+An npm package for rendering ReactJS components in a cleaner and more beautiful way, allowing elements to be passed to the components from the hook’s props. 
+
+(SSR compatible)
 
 ## Installation
 
