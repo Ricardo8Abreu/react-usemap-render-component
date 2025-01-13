@@ -16,11 +16,11 @@ const handleKeyObject: HandleKeyObject = ({ item, key, index }) => {
   }
   // if is an object and have field id
   if (key === "default" && "id" in item) {
-        type TypeItem = DataObject
+    type TypeItem = DataObject
 
-        const newItem = item as TypeItem
+    const newItem = item as TypeItem
 
-        return `${newItem.id}`
+    return `${newItem.id}`
   }
 
   return index

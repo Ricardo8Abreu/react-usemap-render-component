@@ -1,13 +1,13 @@
 import { UseMapTypeData, KeyConfig, KeyConfigObject, KeyConfigNotObject, DataNoObject } from "../types/types"
 
 type ParseTypeItemParams = {
-    item: UseMapTypeData,
-    key: KeyConfig<UseMapTypeData> | "default"
+  key: KeyConfig<UseMapTypeData> | "default"
+  item: UseMapTypeData,
 }
 
 type ParseTypeItem = ({ item, key }: ParseTypeItemParams) => {
-    object: { newKey: KeyConfigObject<object> | "default", newItem: object }
-    noObject: { newKey: KeyConfigNotObject | "default", newItem: DataNoObject }
+  object: { newKey: KeyConfigObject<object> | "default", newItem: object }
+  noObject: { newKey: KeyConfigNotObject | "default", newItem: DataNoObject }
 }
 
 const parseTypeItem: ParseTypeItem = ({ item, key }) => {

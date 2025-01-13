@@ -22,9 +22,6 @@ or
 yarn add react-usemap-render-component
 ```
 
-## Community
-https://t.me/ricardo8Abreu_code_lab_community
-
 ## Usage
 
 To use this package in your project, you must first import it:
@@ -42,7 +39,7 @@ interface Data {
 }
 
 interface MyComponentProps extends Data {
-  color: string 
+  color: "red" 
 }
 
 const data: Data[] = [
@@ -73,7 +70,7 @@ Now, here is an example of how to use the `useMap` hook with an array that is no
 type Data = string
 
 interface MyComponentProps {
-  color: string 
+  color: "red" 
   children: string
 }
 
